@@ -38,4 +38,27 @@ public class prueba
         zoo.Anmiales[2] = animalLombriz;
         
     }
+
+
+// COMPOSICION, SI UN ELEMENTO SE DESTRUYE EL OTRO NO PUEDE EXISTIR. SE CONSTRUYEN LOS OBJETOS ADENTRO DEL CONSTRUCTOR DE LA OTRA CLASE.
+    public class Abeja
+    {
+        Private String nombreDeAbeja;
+
+        public Abeja(String nombreDeAbeja)
+        {
+            this.nombreDeAbeja=nombreDeAbeja;
+        }
+    }
+
+    public class Panal
+    {
+        public Abeja enjambre [];
+        public Panal()
+        {
+            enjambre = new Abeja[2];
+            enjambre[0] = new Abeja("OEDIR");
+            enjambre[1] = new Abeja("SAS");
+        }
+    }
 }
